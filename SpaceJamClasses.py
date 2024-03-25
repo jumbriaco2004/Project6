@@ -118,8 +118,7 @@ class Player(SphereCollideObject):
     def SetParticles(self):
         base.enableParticles()
         self.explodeEffect = ParticleEffect()
-        #self.explodeEffect.loadConfig("./Assets/ParticleEffects/Explosions/basic_xpld_efx.ptf")
-
+        self.explodeEffect.loadConfig("./Assets/ParticleEffects/Explosions/basic_xpld_efx.ptf")
         self.explodeEffect.setScale(20)
         self.explodeNode = self.render.attachNewNode('ExplosionEffects')
     

@@ -1,6 +1,5 @@
 from direct.showbase.ShowBase import ShowBase
 from direct.task import Task
-from CollideObjectBase import PlacedObject
 from panda3d.core import CollisionTraverser, CollisionHandlerPusher
 from direct.gui.OnscreenImage import OnscreenImage
 from panda3d.core import Vec3
@@ -53,7 +52,7 @@ class SpaceJam(ShowBase):
         for j in range(fullCycle):
             unitVec = defensePaths.Cloud()
             unitVec.normalize()
-            position = unitVec * 500 + centralObject
+            position = unitVec * 1000 + centralObject
             spaceJamClasses.Drone(self.loader, "./Assets/Drone Defender/DroneDefender.obj", self.render, droneName, "./Assets/Drone Defender/octotoad1_auv.png", position, 10)
 
     def DrawBaseballSeams(self, centralObject, droneName, step, numSeams, radius = 1):
